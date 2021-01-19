@@ -1,8 +1,6 @@
 public class Expresso extends Boisson {
   public Expresso() {
-    description = "Expressso Coffee";
-  }
-  public double cout() {
-    return 1.99;
+    setDescription("Expresso Coffee");
+    setPrix(1.50);
   }
 }

@@ -1,9 +1,6 @@
 public class Columbia extends Boisson {
   public Columbia(){
-    description = "Columbia Coffee";
-  }
-
-  public double cout() {
-    return .89;
+    setDescription("Columbia Coffee"); 
+    setPrix(1.90);
   }
 }

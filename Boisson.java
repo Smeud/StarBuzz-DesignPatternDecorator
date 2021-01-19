@@ -1,9 +1,25 @@
+import java.text.NumberFormat;
+
 public abstract class Boisson {
-  String description;
+  private String description;
+  private double prix;
 
   public String getDescription() {
     return description;
   }
+  public double getPrix() {
+    return prix;
+  }
 
-  public abstract double cout();
+  protected void setDescription(String description) {
+    this.description = description;
+  }
+  protected void setPrix(double prix) {
+    this.prix = prix;
+  }
+
+  public String toString() {
+    NumberFormat format = NumberFormat.getInstance();format.setMinimumFractionDigits(2);
+    return getDescription()+" : "+format.format(getPrix())+"$";
+  }
 }

@@ -1,12 +1,14 @@
 public class Caramel extends DecorateurIngredient {
-  public Caramel(Boisson boisson) {
-    super(boisson);
+  public Caramel(Boisson b) {
+    boisson = b;
   }
 
-  public double cout(){
-    return 0.10 +boisson.cout();
-  }
   public String getDescription() {
     return boisson.getDescription()+", Caramel";
   }
+
+  public double getPrix() {
+    return boisson.getPrix()+0.10;
+  }
+
 }
